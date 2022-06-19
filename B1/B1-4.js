@@ -1,6 +1,6 @@
 //hàm lấy giá trị và hiển thị ra màn hình
-let contacts = [];
 
+let contacts = [];
 function getContact() {
     let Name = document.querySelector('#name').value;
     let Phone = document.querySelector('#phone').value;
@@ -8,16 +8,11 @@ function getContact() {
         contacts.push(`<br> ${Name}, ${Phone}`);
     }
     contacts.sort(); // arrange text in alphabetical 
-    document.getElementById("display").innerHTML = contacts;
+    document.getElementById("display").innerText= contacts;
+    console.log(contacts);
+    return false;
     
 }
-console.log(contacts);
+// console.log(contacts);
 
-// function getSearch(text) 
-//     return text = document.getElementById("search-input").value;
-//   }
-  
-// function find() {
-//     document.getElementById("result").innerHTML = contacts.filter(getSearch);
-//   }
 
