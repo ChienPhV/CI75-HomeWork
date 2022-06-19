@@ -3,6 +3,7 @@
 
 
 let contacts = [];
+
 function getContact() {
 
     let Name = document.querySelector('#name').value.toUpperCase();
@@ -30,6 +31,20 @@ function search() {
         }
     }
 }
+
+//o	Xoá các danh bạ bị trùng số điện thoại 
+function remove() {
+    let check = contacts.filter((element, index) => {
+        return contacts.indexOf(element) === index;
+    });
+    
+    console.log(check);
+    document.getElementById("display").innerHTML = check;
+}
+
+
+    
+
 
 
 
